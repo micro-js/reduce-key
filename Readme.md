@@ -39,10 +39,10 @@ export default combineReducers({
 
 ### reduceKey(select, reduce)
 
-- `select` - A function that accepts state and `payload` (from the action) and returns the key.
+- `select` - A function that accepts state and action and returns the key.
 - `reduce` - A reducer that reduces over the entities within the map or array
 
-**Returns:** A reducer that reduces over the sub-object in the key and returns a new copy of the map, with the sub-object specified by `select(state, payload)` updated by your reducer.
+**Returns:** A reducer that reduces over the sub-object in the key and returns a new copy of the map, with the sub-object specified by `select(state, action)` updated by your reducer.
 
 ## License
 
