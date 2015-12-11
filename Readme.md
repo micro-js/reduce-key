@@ -39,8 +39,9 @@ export default combineReducers({
 
 ### reduceKey(select, reduce)
 
-- `select` - A function that accepts state and action and returns the key.
-- `reduce` - A reducer that reduces over the entities within the map or array
+- `select` - A function that accepts state and action and returns the key. If `select` returns `null`, `undefined`, or `false`, the reducer will not be called. So you are free to do things like:
+             `(state, action) => action.payload.key` - even if your actions do not always contain key.
+- `reduce` - A reducer that reduces over the entities within the map or array.
 
 **Returns:** A reducer that reduces over the sub-object in the key and returns a new copy of the map, with the sub-object specified by `select(state, action)` updated by your reducer.
 
