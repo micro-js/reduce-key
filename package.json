@@ -2,7 +2,7 @@
   "name": "@micro-js/reduce-key",
   "description": "Reduce a keyed map (or array), using a selector function.",
   "repository": "git://github.com/micro-js/reduce-key.git",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
