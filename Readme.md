@@ -14,18 +14,35 @@ Reduce a keyed map (or array), using a selector function.
 
 ## Usage
 
+One thing that often prevents the fully declarative construction of reducers is keyed maps (e.g. objects of the form `{[key]: entity}`, or arrays). reduceKey solves this problem, by allowing you to specify a selector function that decides which subject to apply the reducer to.
+
+
 ```js
 var reduceKey = require('@micro-js/reduce-key')
 
+const todoReducer = combineReducers({
+  text: handleActions({
+    [TODO_SET_TEXT]: (state, {text}) => text,
+    [TODO_CLEAR_TEXT]: () => ''
+  }),
+  completed: handleActions({
+    [TOGGLE_COMPLETED]: (state) => !state
+  })
+})
+
+export default combineReducers({
+  todos: reduceKey((state, {idx}) => idx, todoReducer)
+})
 ```
 
 ## API
 
-### reduceKey(arg)
+### reduceKey(select, reduce)
 
-- `arg` -
+- `select` - A function that accepts state and `payload` (from the action) and returns the key.
+- `reduce` - A reducer that reduces over the entities within the map or array
 
-**Returns:**
+**Returns:** A reducer that reduces over the sub-object in the key and returns a new copy of the map, with the sub-object specified by `select(state, payload)` updated by your reducer.
 
 ## License
 

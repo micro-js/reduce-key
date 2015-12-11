@@ -11,6 +11,6 @@ var test = require('tape')
 
 test('should work', function (t) {
   var reducer = reduceKey(() => 'test', (state, value) => value)
-  t.equal(reducer({test: 1}, 2).test, 2)
+  t.equal(reducer({test: 1}, {payload: 2}).test, 2)
   t.end()
 })
