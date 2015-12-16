@@ -10,7 +10,7 @@ Reduce a keyed map (or array), using a selector function.
 
 ## Installation
 
-    $ npm install @micro-js/reduce-key
+    $ npm install @f/reduce-key
 
 ## Usage
 
@@ -18,7 +18,7 @@ One thing that often prevents the fully declarative construction of reducers is 
 
 
 ```js
-var reduceKey = require('@micro-js/reduce-key')
+var reduceKey = require('@f/reduce-key')
 
 const todoReducer = combineReducers({
   text: handleActions({
@@ -55,5 +55,5 @@ MIT
 [git-url]: https://github.com/micro-js/reduce-key
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat
 [standard-url]: https://github.com/feross/standard
-[npm-image]: https://img.shields.io/npm/v/@micro-js/reduce-key.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/@micro-js/reduce-key
+[npm-image]: https://img.shields.io/npm/v/@f/reduce-key.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@f/reduce-key
