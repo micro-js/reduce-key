@@ -9,7 +9,7 @@
     "postversion": "git push && git push --tags && npm publish --access=public"
   },
   "dependencies": {
-    "@f/clone-shallow": "^1.0.0",
+    "@f/clone-shallow": "^1.1.2",
     "@f/is-undefined": "^1.0.0"
   },
   "devDependencies": {
